@@ -1,0 +1,6 @@
+Daemon_HomeMade.egg-info/PKG-INFO
+Daemon_HomeMade.egg-info/SOURCES.txt
+Daemon_HomeMade.egg-info/dependency_links.txt
+Daemon_HomeMade.egg-info/top_level.txt
+daemon/__init__.py
+daemon/daemon.py
