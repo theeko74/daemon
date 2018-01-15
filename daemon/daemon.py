@@ -112,6 +112,8 @@ class Daemon:
         if os.path.exists(self.pidfile):
             with open(self.pidfile) as f:
                 os.kill(int(f.read()), signal.SIGTERM)
+                while os.path.exists(self.pidfile):
+                    pass
         else:
             print("Daemon is not running.", file=sys.stderr)
         raise SystemExit(1)
