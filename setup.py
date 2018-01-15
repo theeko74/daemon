@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 import daemon
 
 setup(
-    name='Daemon-HomeMade',
+    name='daemon',
     version=daemon.__version__,
     description="Daemon class to transform any python script into a daemon",
     long_description=open('README.md').read(),
