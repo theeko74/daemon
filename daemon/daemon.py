@@ -129,7 +129,7 @@ class Daemon:
 
     def commands(self):
         """Implements the basic commands start, stop to control the daemon"""
-        if len(sys.argv) != 2:
+        if len(sys.argv) < 2:
             print("Usage: {} [start|stop|restart]".format(sys.argv[0]), file=sys.stderr)
             raise SystemExit(1)
 
