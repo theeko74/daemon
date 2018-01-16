@@ -101,7 +101,6 @@ class Daemon:
     def restart(self):
         """Restart command (stop and start again)"""
         self.stop()
-        print("Start now")
         self.start()
 
     def stop(self):
@@ -115,7 +114,7 @@ class Daemon:
                     pass
         else:
             print("Daemon is not running.", file=sys.stderr)
-        raise SystemExit(1)
+            raise SystemExit(0)
 
 
     def before_stop(self):
