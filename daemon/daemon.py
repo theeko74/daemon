@@ -101,10 +101,7 @@ class Daemon:
     def restart(self):
         """Restart command (stop and start again)"""
         self.stop()
-        # Wait that the daemon stop
-        # Function is asynchronous and do not wait...
-        while os.path.exists(self.pidfile):
-            pass
+        print("Start now")
         self.start()
 
     def stop(self):
@@ -112,6 +109,8 @@ class Daemon:
         if os.path.exists(self.pidfile):
             with open(self.pidfile) as f:
                 os.kill(int(f.read()), signal.SIGTERM)
+                # Wait that the daemon stop
+                # Function is asynchronous and do not wait...
                 while os.path.exists(self.pidfile):
                     pass
         else:
